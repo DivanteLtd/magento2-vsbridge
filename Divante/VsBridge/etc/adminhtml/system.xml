@@ -1,0 +1,38 @@
+<?xml version="1.0"?><!--
+/**
+ * @author         Mateusz Bukowski
+ * @package        Divante_VsBridge
+ * @copyright      Copyright(C) 2018 Divante
+ * @license        See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <tab id="divante_vue" translate="label" sortOrder="10">
+            <label>Divante VueStorefront</label>
+        </tab>
+        <section id="vs_bridge" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>VS Bridge</label>
+            <tab>divante_vue</tab>
+            <resource>Divante_VsBridge::vs_bridge</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="is_active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable VS Bridge</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="product_edit_endpoint" translate="label" sortOrder="20" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product edit endpoint</label>
+                    <tooltip>Please enter edit product URL</tooltip>
+                </field>
+                <field id="product_delete_endpoint" translate="label" sortOrder="30" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product delete endpoint</label>
+                    <tooltip>Please enter delete product URL</tooltip>
+                </field>
+                <field id="secret_key" translate="label" sortOrder="40" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Secret Key</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

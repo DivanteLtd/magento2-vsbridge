@@ -1,0 +1,16 @@
+<?xml version="1.0"?><!--
+/**
+ * @author         Mateusz Bukowski
+ * @package        Divante_VsBridge
+ * @copyright      Copyright(C) 2018 Divante
+ * @license        See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
+    <event name="catalog_product_save_after">
+        <observer name="vue_catalog_product_save_after_observer" instance="Divante\VsBridge\Observer\Product\SaveAfter"/>
+    </event>
+    <event name="catalog_product_delete_after">
+        <observer name="vue_catalog_product_delete_after_observer" instance="Divante\VsBridge\Observer\Product\DeleteAfter"/>
+    </event>
+</config>
